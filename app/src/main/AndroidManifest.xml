@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jonathanmitchell.bignerdranchpractice" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="22" />
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+
+
+    <uses-feature android:name="android.hardware.camera2"/>
+    <uses-feature android:name="android.hardware.camera"/>
+
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:logo="@drawable/ic_launcher"
+        android:label="@string/app_name"
+
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CriminalIntent.CrimeListActivity"
+            android:label="CrimeListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity"/>
+        </activity>
+        <activity
+            android:name=".GeoQuiz.GeoQuizActivity"
+            android:label="@string/title_activity_geo_quiz" >
+        </activity>
+        <activity
+            android:name=".GeoQuiz.CheatActivity"
+            android:label="@string/title_activity_cheat" >
+        </activity>
+        <activity
+            android:name=".CriminalIntent.CrimePagerActivity"
+            android:label="@string/title_activity_crime">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".CriminalIntent.CrimeListActivity"/>
+        </activity>
+
+        <activity
+            android:name=".HelloMoon.HelloMoon"
+            android:label="@string/title_activity_hello_moon"
+            android:theme="@style/MyTheme"
+            >
+        </activity>
+
+        <activity
+            android:name=".CriminalIntent.Camera.CrimeCameraActivity"
+            android:screenOrientation="landscape"
+            android:label="@string/title_activity_camera"
+            />
+        <activity
+            android:name=".RemoteControl.RemoteControlActivity"
+            android:label="@string/title_activity_remote"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:launchMode="singleTop"
+            android:name=".PhotoGallery.PhotoGalleryActivity"
+            android:label="@string/title_photo_activity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+            <meta-data android:name="android.app.searchable"
+                android:resource="@xml/searchable"
+                />
+
+        </activity>
+
+        <service android:name=".PhotoGallery.Services.PollService"/>
+
+    </application>
+
+</manifest>

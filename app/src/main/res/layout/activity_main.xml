@@ -1,0 +1,19 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jonathanmitchell.bignerdranchpractice.MainActivity"
+    android:background="@color/highlighted_text_material_light"
+    >
+
+    <ListView
+        android:id="@+id/main_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/abc_input_method_navigation_guard"
+        android:dividerHeight="5dp"
+        />
+
+
+
+</RelativeLayout>

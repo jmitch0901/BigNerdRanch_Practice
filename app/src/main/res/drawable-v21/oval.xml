@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+   <!-- <item android:state_pressed="true">
+        <shape
+            android:shape="oval"
+
+            >
+
+            <solid
+                android:color="#FFCCBC"
+
+                />
+        </shape>
+    </item>
+    <item android:state_pressed="false">
+        <shape
+            android:shape="oval"
+
+            >
+
+            <solid
+                android:color="#FF5722"
+
+                />
+        </shape>
+    </item> -->
+
+    <ripple
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@android:color/black"
+    >
+
+        <item>
+            <shape android:shape="oval">
+                <solid android:color="#FF5722"/>
+            </shape>
+            </item>
+    </ripple>
